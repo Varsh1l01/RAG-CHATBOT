@@ -65,7 +65,7 @@ full conversational memory and source-cited responses.
 
 ## Quick Start
 
-### 1 — Clone & install
+### 1 — install
 
 ```bash
 git clone <repo>
