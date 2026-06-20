@@ -75,7 +75,7 @@ class RAGEngine:
         groq_api_key: str,
         pinecone_api_key: str,
         index_name: str = "rag-chatbot-index",
-        groq_model: str = "llama-3.1-70b-versatile",
+        groq_model: str = "llama-3.3-70b-versatile",
         pinecone_cloud: str = "aws",
         pinecone_region: str = "us-east-1",
         top_k: int = 4,

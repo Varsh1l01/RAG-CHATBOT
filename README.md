@@ -70,7 +70,7 @@ full conversational memory and source-cited responses.
 ```bash
 git clone <repo>
 cd rag-chatbot
-python 3.11 -m venv .venv
+py -3.11 -m venv .venv
 .venv\Scripts\activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -108,7 +108,7 @@ Open `http://localhost:8501` in your browser.
 
 | Setting | Default | Description |
 |---|---|---|
-| `GROQ_MODEL` | `llama-3.1-70b-versatile` | LLM model |
+| `GROQ_MODEL` | `llama-3.3-70b-versatile` | LLM model |
 | `CHUNK_SIZE` | `1000` | Characters per chunk |
 | `CHUNK_OVERLAP` | `200` | Overlap between chunks |
 | `RETRIEVER_TOP_K` | `4` | Chunks retrieved per query |
@@ -121,10 +121,10 @@ Open `http://localhost:8501` in your browser.
 
 | Model | Context | Best For |
 |---|---|---|
-| `llama-3.1-70b-versatile` | 128k | Best quality, complex Q&A |
+| `llama-3.3-70b-versatile` | 128k | Best quality, complex Q&A |
 | `llama-3.1-8b-instant` | 128k | Fast, lower latency |
-| `mixtral-8x7b-32768` | 32k | Good balance |
-| `gemma2-9b-it` | 8k | Lightweight tasks |
+| `meta-llama/llama-4-scout-17b-16e-instruct` | 128k | Latest Llama 4, experimental |
+| `qwen/qwen3-32b` | 128k | Strong alternative, reasoning |
 
 ---
 
