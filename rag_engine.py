@@ -1,7 +1,7 @@
 """
 rag_engine.py
 ─────────────
-Core RAG pipeline:
+DocuMind — Core RAG pipeline:
   • HuggingFace embeddings  (all-MiniLM-L6-v2, local — no extra API key)
   • Pinecone               (vector store & semantic search)
   • Groq + LangChain       (LLM orchestration)
@@ -74,7 +74,7 @@ class RAGEngine:
         self,
         groq_api_key: str,
         pinecone_api_key: str,
-        index_name: str = "rag-chatbot-index",
+        index_name: str = "documind-index",
         groq_model: str = "llama-3.3-70b-versatile",
         pinecone_cloud: str = "aws",
         pinecone_region: str = "us-east-1",

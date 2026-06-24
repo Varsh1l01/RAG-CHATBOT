@@ -1,4 +1,4 @@
-# 🔍 RAG Chatbot
+# 🧠 DocuMind
 ### Groq × Pinecone × LangChain × HuggingFace Embeddings
 
 A production-ready Retrieval-Augmented Generation (RAG) pipeline that lets you
@@ -69,7 +69,7 @@ full conversational memory and source-cited responses.
 
 ```bash
 git clone <repo>
-cd rag-chatbot
+cd documind
 py -3.11 -m venv .venv
 .venv\Scripts\activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -112,7 +112,7 @@ Open `http://localhost:8501` in your browser.
 | `CHUNK_SIZE` | `1000` | Characters per chunk |
 | `CHUNK_OVERLAP` | `200` | Overlap between chunks |
 | `RETRIEVER_TOP_K` | `4` | Chunks retrieved per query |
-| `PINECONE_INDEX_NAME` | `rag-chatbot-index` | Pinecone index name |
+| `PINECONE_INDEX_NAME` | `documind-index` | Pinecone index name |
 | `PINECONE_REGION` | `us-east-1` | Pinecone serverless region |
 
 ---
@@ -131,7 +131,7 @@ Open `http://localhost:8501` in your browser.
 ## Project Structure
 
 ```
-rag-chatbot/
+documind/
 ├── app.py                  # Streamlit UI
 ├── rag_engine.py           # Core RAG pipeline (Groq + Pinecone + LangChain)
 ├── document_processor.py   # Document loading & chunking

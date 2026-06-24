@@ -1,6 +1,6 @@
 """
-app.py — RAG Chatbot  ·  Streamlit UI
-──────────────────────────────────────
+app.py — DocuMind  ·  Streamlit UI
+────────────────────────────────────
 Groq  ×  Pinecone  ×  LangChain  ×  HuggingFace Embeddings
 """
 
@@ -25,8 +25,8 @@ from rag_engine import RAGEngine
 load_dotenv()
 
 st.set_page_config(
-    page_title="RAG Chatbot",
-    page_icon="🔍",
+    page_title="DocuMind",
+    page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -247,8 +247,10 @@ col_h1, col_h2 = st.columns([3, 1])
 with col_h1:
     st.markdown("""
     <h1 style="font-family:'Space Grotesk',sans-serif; font-size:2rem;
-               font-weight:700; letter-spacing:-.02em; margin:0;">
-        🔍 RAG Chatbot
+               font-weight:700; letter-spacing:-.02em; margin:0;
+               background:linear-gradient(135deg,#4f9cf9,#7c5cfc); -webkit-background-clip:text;
+               -webkit-text-fill-color:transparent; background-clip:text;">
+        🧠 DocuMind
     </h1>
     <p style="color:#8a94a8; font-size:.9rem; margin-top:4px;">
         Groq · Pinecone · LangChain · Semantic Search · Conversational Memory
@@ -310,7 +312,7 @@ with st.sidebar:
     with st.expander("🌲 Pinecone Index"):
         index_name = st.text_input(
             "Index Name",
-            value=os.getenv("PINECONE_INDEX_NAME", "rag-chatbot-index"),
+            value=os.getenv("PINECONE_INDEX_NAME", "documind-index"),
         )
         pinecone_region = st.selectbox(
             "Region",
@@ -508,9 +510,9 @@ with left_col:
         if not st.session_state.messages:
             st.markdown("""
             <div style="text-align:center; padding:40px 20px; color:#545e72;">
-                <div style="font-size:2.5rem; margin-bottom:12px;">🔍</div>
+                <div style="font-size:2.5rem; margin-bottom:12px;">🧠</div>
                 <div style="font-family:'Space Grotesk',sans-serif; font-size:1rem;
-                            font-weight:600; color:#8a94a8;">Ready to search your documents</div>
+                            font-weight:600; color:#8a94a8;">DocuMind is ready — start asking</div>
                 <div style="font-size:.85rem; margin-top:6px;">
                     Initialise the engine → Upload documents → Start asking
                 </div>
